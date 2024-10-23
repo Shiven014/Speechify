@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speechify</title>
+    <link rel="stylesheet" href="Texttospeech.css">
+
+    <!--  favicon -->
+    <link rel="icon" href="favicon_speechify.png" id="favion" /></head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <a href="Home.html">
+            <img src="speech.jpeg" alt="Speechify Logo" id="logo">
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="text-to-speech.html">Text-to-Speech</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+        <!-- Techniques -->
+    <section class="Techniques"> 
+        <h2>Use any of the methods below!</h2>
+        <div class="textupload">
+            <h3>Write your text! </h3>
+            <textarea id="textInput" class="txtin"  placeholder="Enter text here...">
+            </textarea>
+
+            
+            
+        </div>
+        <div class="fileupload"> 
+            <h3>Upload a text file!</h3>
+            <input type="file" id="fileInput" class="filein"  accept=".txt">
+        </div>
+        <div class="photoupload">
+            <h3>Upload text picture!</h3>
+            <input class="imagein" id="imageInput" type="file" accept="image/*" />
+        </div> 
+        
+        <div class="speechify-buttons">
+            <button id="speechifyButton">Speechify</button>
+            <button id="downloadButton">Download Speech</button>
+            <button id="stopButton">Stop Speech</button>
+        </div>
+
+        <div id="output"></div>
+
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Text-to-Speech Engine. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+/* General Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: lightblue;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #222;
+    color: #fff;
+    padding: 2em 5%;
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style:normal;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar img{
+    width: 300px;
+    height: 50px;
+}
+
+.navbar .sp{
+    font-size: 1.8em;
+    border: 5px;
+    color: #ff6200;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.navbar .sp:hover{
+    text-decoration: underline;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2em;
+    
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+/* General Styles */
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 50px 20px;
+} 
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section .container{
+    border-radius: 3em;
+    display: flexbox;
+    background-color: lightgrey;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    padding-top: 1%;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.intro-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.divider {
+    height: 2px;
+    background-color: #ddd;
+    margin: 30px 0;
+}
+
+.features-list, .tech-stack {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 18px;
+}
+
+.features-list li, .tech-stack li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.features-list li::before, .tech-stack li::before {
+    content: '✔';
+    color: #ff6200;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.team-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.team-member {
+    text-align: center;
+    margin: 15px;
+    flex-basis: 200px;
+}
+
+.team-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    color: #333;
+}
+
+.team-member p {
+    color: #666;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    padding: 1.5em 5%;
+    position: relative;
+    margin-top: 20px;
+    bottom: 0;
+    width: 90%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .team-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

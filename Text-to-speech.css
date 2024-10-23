@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: lightcyan;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #222;
+    color: #fff;
+    padding: 2em 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar img{
+    width: 300px;
+    height: 50px;
+}
+
+.navbar .sp{
+    font-size: 1.8em;
+    border: 5px;
+    color: #ff6200;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2em;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+
+.Techniques{
+    background-color: #00000099;
+    color: white;
+    margin: 20em;
+    display: flexbox;
+    align-items: center;
+    text-align: center;
+    height: 55em;
+    width: 100em;
+    margin-top: 4em;
+    border-radius: 3em;
+    
+}
+.Techniques h2{
+    padding-top: 70px;
+    font-size: 3.75em;
+    border: solid #ff6200;
+    padding-bottom: 80px;
+    background: #ff6200;
+    
+}
+
+.textupload, .fileupload, .photoupload{
+    background-color: white;
+    display: inline-flex;
+    padding: 6em;
+    margin: 5em;
+    border-radius: 10px;
+    color: #ff6200;
+    height: 7em;
+    width: 8em;
+}
+
+.Techniques h3{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+}
+
+.head1, .head2, .head3{
+    display: inline-flex;
+    padding-right: 10em;
+    align-items: center;
+    
+}
+
+textarea::placeholder{
+    font-size: 16px;
+    color: #ddd;
+}
+
+.txtin{
+    display: block;
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    padding: 1.5em 5%;
+    position: relative;
+    margin-top: 20px;
+    bottom: 0;
+    width: 90%;
+}
+
+select{
+    flex: 1;
+}
+
+.row{
+    width: 600px;
+    display: flex;
+    align-items: center;
+}
+
+select{
+    flex: 1;
+    color: #fff;
+    background: #403d84;
+    height: 50px;
+    padding: 0 20px;
+    outline: 0;
+    border: 0;
+    border-radius: 35px;
+}
+
+.speechify-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#speechifyButton {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif; /* Inherit font from body */
+}
+
+
+#speechifyButton:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+}
+
+
+#downloadButton {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Add a small margin to separate it from the Convert button */
+    font-family: "Poppins", sans-serif; /* Inherit font from body */
+}
+
+#downloadButton:hover {
+    background-color: #0062cc; /* Darker blue on hover */
+}
+
+#stopButton{
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-family: "poppins",sans-serif;
+}
+
+#stopButton:hover {
+    background-color: darkorange;
+}

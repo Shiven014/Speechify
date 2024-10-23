@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Text-to-Speech Engine</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- <link rel="stylesheet" href="navbar.html"> -->
+
+    <!--  favicon -->
+    <link rel="icon" href="favicon_speechify.png" id="favion" />
+</head>
+<body>
+    <nav class="navbar">
+        <a href="Home.html">
+            <img src="speech.jpeg" alt="Speechify Logo" id="logo">
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Text-to-speech.html">Text-to-Speech</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+
+    <!-- Login Form Section -->
+    <section class="login-section">
+        <div class="login-container">
+            <h2>Login to Your Account</h2>
+            <form action="dashboard.html" method="post">
+                <label for="username"  class="a">Username</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password"  class="a">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit" class="btn">Login </button>
+                
+                <!-- <link class="btn" href="Text-to-speech.html"> -->
+            </form>
+            <p>Don't have an account? <a href="register.html">Sign up</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Text-to-Speech Engine. All rights reserved.</p>
+    </footer>
+
+
+</body>
+</html>
