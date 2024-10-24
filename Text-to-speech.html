@@ -5,59 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speechify</title>
     <link rel="stylesheet" href="Texttospeech.css">
-
-    <!--  favicon -->
-    <link rel="icon" href="favicon_speechify.png" id="favion" /></head>
+    <link rel="icon" href="images/favicon_16x16.png" id="favicon">
+</head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-
         <a href="Home.html">
-            <img src="speech.jpeg" alt="Speechify Logo" id="logo">
+            <img src="images/speech.jpeg" alt="Speechify Logo" id="logo">
         </a>
-        
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
         <ul class="nav-links">
             <li><a href="Home.html">Home</a></li>
             <li><a href="text-to-speech.html">Text-to-Speech</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="login.html">Login</a></li>
-            <li><a href="register.html">Register</a></li>
+            <li><a href="register.html">Sign Up</a></li>
         </ul>
     </nav>
-        <!-- Techniques -->
-    <section class="Techniques"> 
+    
+    <!-- Techniques Section -->
+    <section class="techniques">
         <h2>Use any of the methods below!</h2>
-        <div class="textupload">
-            <h3>Write your text! </h3>
-            <textarea id="textInput" class="txtin"  placeholder="Enter text here...">
-            </textarea>
-
-            
-            
+        <div class="upload-methods">
+            <div id="keyin" class="inputypes">
+                <h3>Write your text!</h3>
+                <textarea id="textInput" class="txtin" placeholder="Enter text here..."></textarea>
+            </div>
+            <div id="filein" class="inputypes">
+                <h3>Upload a text file!</h3>
+                <label for="fileInput">
+                    <img  id="inputlogofile" class="inputlogos" src="images/text-editor.png" alt="">
+                </label>
+                <input type="file" id="fileInput" class="fileinput" accept=".txt" style="display: none;">
+            </div>
+            <div id="imgin" class="inputypes">
+                <h3>Upload picture!</h3>
+                <label for="imageInput">
+                    <img id="inputlogoimage" class="inputlogos" src="images/image-upload-logo.png" alt="">
+                </label>
+                <input class="imagein" id="imageInput" type="file" accept="image/*" style="display: none;" />
+            </div> 
         </div>
-        <div class="fileupload"> 
-            <h3>Upload a text file!</h3>
-            <input type="file" id="fileInput" class="filein"  accept=".txt">
+        
+        <div class="mainbutton">
+            <button id="speechifyButton">Speechify</button>
         </div>
-        <div class="photoupload">
-            <h3>Upload text picture!</h3>
-            <input class="imagein" id="imageInput" type="file" accept="image/*" />
-        </div> 
         
         <div class="speechify-buttons">
-            <button id="speechifyButton">Speechify</button>
-            <button id="downloadButton">Download Speech</button>
-            <button id="stopButton">Stop Speech</button>
+            <label for="downloadButton">
+                <h3 style="margin: 0%;">Download Speech</h3>
+                <img id="downloadspeechlogo" class="uilogos" src="images/arrow.png" alt="Download">
+            </label>
+            <button id="downloadButton" style="display: none;">Download Speech</button>
+
+            <label for="stopButton">
+                <h3 style="margin: 0%;">Stop Speech</h3>
+                <img id="stopspeechlogo" class="uilogos" src="images/stop-speech.png" alt="Stop">
+            </label>
+            <button id="stopButton" style="display: none;">Stop Speech</button>
         </div>
 
         <div id="output"></div>
-
     </section>
 
     <footer class="footer">
         <p>&copy; 2024 Text-to-Speech Engine. All rights reserved.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('show');
+    }
+    </script>
 </body>
 </html>

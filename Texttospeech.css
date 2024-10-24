@@ -1,14 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap');
 
 body {
     font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-style: normal;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,11 +12,8 @@ body {
 .navbar {
     background-color: #222;
     color: #fff;
-    padding: 2em 5%;
+    padding: 1em 5%;
     display: flex;
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-style: normal;
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -31,22 +21,9 @@ body {
     z-index: 1000;
 }
 
-.navbar img{
-    width: 300px;
-    height: 50px;
-}
-.navbar .sp{
-    font-size: 1.8em;
-    border: 5px;
-    color: #ff6200;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-}
-
-.logo {
-    font-size: 1.8em;
-    font-weight: bold;
-    letter-spacing: 1px;
+.navbar img {
+    width: 250px; /* Adjusted for better responsiveness */
+    height: auto;
 }
 
 .nav-links {
@@ -60,165 +37,181 @@ body {
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    font-size: 1em;
     padding: 0.5em 1em;
-    border-radius: 3px;
     transition: background-color 0.3s ease;
 }
 
 .nav-links a:hover {
     background-color: #575757;
-    text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        gap: 1em;
-    }
-}
-
-.Techniques {
+.techniques {
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     margin: 2em auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1em;
+    padding: 2em;
     border-radius: 20px;
     max-width: 90%;
     width: 100%;
-    box-sizing: border-box;
+    text-align: center;
+    
 }
 
-
-.Techniques h2 {
+.techniques h2 {
     font-size: 2.5em;
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    margin-bottom: 1.0em;
-    border: solid #ff6200;
-    padding: 1em;
+    margin-bottom: 1.5em;
+    padding: 0.7em;
     background-color: #ff6200;
     border-radius: 10px;
-    width: 20em;
+    width: 70%;
+    justify-self: center;
 }
 
-.textupload, .fileupload, .photoupload {
-    background-color: white;
-    display: inline;
+.hamburger {
+    display: none;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5em;
-    margin: 1em;
-    border-radius: 10px;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+
+.upload-methods {
+    background-color: rgba(0, 0, 0, 0);
     color: #ff6200;
-    height: 11em;
-    width: 50em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.Techniques h3{
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-}
-
-
-.Techniques h3{
-    font-size: 2.2em;
-}
-
-.txtin {
-    display: block;
-    width: 97%;
-    height: 2.5;
     padding: 1em;
-    margin-top: 0.5em;
-    margin-bottom: 0.3em;
-    font-size: 1em;
+    border-radius: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flex to align items nicely */
+    flex-direction: row; /* Stack items vertically */
+    align-items: center; /* Center align */
+    height: 20rem;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.upload-methods h3 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.inputlogos{
+    height: 4em;
+    padding: 0.1em;
+    margin: 0.5em;
+    transition: background-color 0.3s ease, transform 0.3s ease;;
+}
+
+.inputlogos:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#textInput{
+    height: 7vh;
+    width: 18vh;
+}
+
+
+
+.inputypes{
+    width: 30%; /* Slightly less than 100% to allow padding */
+    height: 14em; /* Fixed height for consistency */
+    padding: 0.5em;
     border-radius: 10px;
     border: 1px solid #ccc;
+    background-color: #ffffff;
+    margin: 1em;
+
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    
+}
+.inputypes:hover{
+    transform: scale(1.1);
 }
 
-footer {
-    text-align: center;
-    background-color: #000000;
-    color: white;
-    padding: 1.5em 5%;
-    position: relative;
-    margin-top: 20px;
-    bottom: 0;
-    width: 90%;
-}
-
-/* ... existing CSS code ... */
-
-#downloadButton {
-    padding: 10px 20px;
-    background-color: #2ecc71; /* Green color */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 10px; /* Add a small margin to separate it from the Convert button */
-    font-family: "Poppins", sans-serif; /* Inherit font from body */
-}
-
-#downloadButton:hover {
-    background-color: #27ae60; /* Darker green on hover */
-}
 
 .speechify-buttons {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    justify-content: space-around; /* Space buttons evenly */
+   
+}
+
+
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    transition: background-color 0.3s ease;
+    margin: 0.5em; /* Add margin for spacing between buttons */
 }
 
 #speechifyButton {
-    padding: 10px 20px;
-    background-color: orange; /* Green color */
+    background-color: #ff6200;
     color: white;
-    border: none;
-    border-radius: 5px;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 2em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;;
+}
+
+#speechifyButton:hover{
     cursor: pointer;
-    font-family: "Poppins", sans-serif; /* Inherit font from body */
+    transform: scale(1.05);
+}
+
+#downloadspeechlogo{
+    height: 5em;
+    width: 5em;
+}
+
+#stopspeechlogo{
+    height: 5em;
+    width: 5em;
+}
+
+.uilogos:hover{
+    cursor: pointer;
+
+
 }
 
 #speechifyButton:hover {
-    background-color: darkorange; /* Darker green on hover */
+    background-color: darkorange;
 }
 
 #downloadButton {
-    padding: 10px 20px;
-    background-color: #007bff; /* Blue color */
+    background-color: #007bff;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 10px; /* Add a small margin to separate it from the Convert button */
-    font-family: "Poppins", sans-serif; /* Inherit font from body */
 }
 
 #downloadButton:hover {
-    background-color: #0062cc; /* Darker blue on hover */
+    background-color: #0062cc;
 }
 
-
-#stopButton{
-    padding: 10px;
+#stopButton {
     background-color: orange;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 10px;
-    font-family: "poppins",sans-serif;
 }
 
 #stopButton:hover {
     background-color: darkorange;
+}
+
+footer {
+    text-align: center;
+    background-color: #000;
+    color: white;
+    padding: 1.5em 0;
+    margin-top: 20px;
 }

@@ -7,21 +7,28 @@
     <link rel="stylesheet" href="about.css">
 
     <!--  favicon -->
-    <link rel="icon" href="favicon_speechify.png" id="favion" /></head>
+    <link rel="icon" href="images/favicon_16x16.png" id="favion">
+</head>
 <body>
 
     <header>
         <nav class="navbar">
             <a href="Home.html">
-                <img src="speech.jpeg" alt="Speechify Logo" id="logo">
+                <img src="images/speech.jpeg" alt="Speechify Logo" id="logo">
             </a>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             
             <ul class="nav-links">
                 <li><a href="Home.html">Home</a></li>
                 <li><a href="Text-to-speech.html">Text-to-Speech</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Registe</a></li>
+                <li><a href="register.html">Sign-up</a></li>
             </ul>
         </nav>
     </header>
@@ -60,22 +67,22 @@
                 <h2>Meet the Team</h2>
                 <div class="team-section">
                     <div class="team-member">
-                        <img src="ankit.jpg" alt="Ankit" class="team-photo">
+                        <img src="images/ankit.jpg" alt="Ankit" class="team-photo">
                         <h3>Ankit</h3>
                         <p>Frontend Developer</p>
                     </div>
                     <div class="team-member">
-                        <img src="himank.jpg" alt="Himank" class="team-photo">
+                        <img src="images/himank.jpg" alt="Himank" class="team-photo">
                         <h3>Himank</h3>
                         <p>Backend Developer</p>
                     </div>
                     <div class="team-member">
-                        <img src="shiven.jpg" alt="Shiven" class="team-photo">
+                        <img src="images/shiven.jpg" alt="Shiven" class="team-photo">
                         <h3>Shiven</h3>
                         <p>UI/UX Designer</p>
                     </div>
                     <div class="team-member">
-                        <img src="nakul.jpg" alt="Nakul" class="team-photo">
+                        <img src="images/nakul.jpg" alt="Nakul" class="team-photo">
                         <h3>Nakul</h3>
                         <p>Project Manager</p>
                     </div>
@@ -87,6 +94,13 @@
     <footer>
         <p>&copy; 2024 Text-to-Speech Converter. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
 

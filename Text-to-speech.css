@@ -1,53 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap');
 
 body {
     font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-style: normal;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #333;
     background-color: lightcyan;
-    display: block;
-    justify-content: space-between;
-    align-items: center;
 }
 
-/* Navbar */
 .navbar {
     background-color: #222;
     color: #fff;
-    padding: 2em 5%;
+    padding: 1em 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: normal;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.navbar img{
-    width: 300px;
-    height: 50px;
-}
-
-.navbar .sp{
-    font-size: 1.8em;
-    border: 5px;
-    color: #ff6200;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-}
-
-.logo {
-    font-size: 1.8em;
-    font-weight: bold;
-    letter-spacing: 1px;
+.navbar img {
+    width: 250px; /* Adjusted for better responsiveness */
+    height: auto;
 }
 
 .nav-links {
@@ -58,167 +34,109 @@ body {
     gap: 2em;
 }
 
-.nav-links li {
-    display: inline;
-}
-
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2em;
     padding: 0.5em 1em;
-    border-radius: 3px;
     transition: background-color 0.3s ease;
 }
 
 .nav-links a:hover {
     background-color: #575757;
-    text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        gap: 1em;
-    }
-}
-
-.Techniques{
-    background-color: #00000099;
+.techniques {
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    margin: 20em;
-    display: flexbox;
-    align-items: center;
-    text-align: center;
-    height: 55em;
-    width: 100em;
-    margin-top: 4em;
-    border-radius: 3em;
-    
-}
-.Techniques h2{
-    padding-top: 70px;
-    font-size: 3.75em;
-    border: solid #ff6200;
-    padding-bottom: 80px;
-    background: #ff6200;
-    
-}
-
-.textupload, .fileupload, .photoupload{
-    background-color: white;
-    display: inline-flex;
-    padding: 6em;
-    margin: 5em;
-    border-radius: 10px;
-    color: #ff6200;
-    height: 7em;
-    width: 8em;
-}
-
-.Techniques h3{
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-}
-
-.head1, .head2, .head3{
-    display: inline-flex;
-    padding-right: 10em;
-    align-items: center;
-    
-}
-
-textarea::placeholder{
-    font-size: 16px;
-    color: #ddd;
-}
-
-.txtin{
-    display: block;
+    margin: 2em auto;
+    padding: 2em;
+    border-radius: 20px;
+    max-width: 90%;
     width: 100%;
-}
-
-footer {
     text-align: center;
-    background-color: #000000;
-    color: white;
-    padding: 1.5em 5%;
-    position: relative;
-    margin-top: 20px;
-    bottom: 0;
-    width: 90%;
 }
 
-select{
-    flex: 1;
+.techniques h2 {
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    background-color: #ff6200;
+    border-radius: 10px;
 }
 
-.row{
-    width: 600px;
-    display: flex;
-    align-items: center;
+.upload-method {
+    background-color: white;
+    color: #ff6200;
+    padding: 2em;
+    margin: 1em 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flex to align items nicely */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align */
 }
 
-select{
-    flex: 1;
-    color: #fff;
-    background: #403d84;
-    height: 50px;
-    padding: 0 20px;
-    outline: 0;
-    border: 0;
-    border-radius: 35px;
+.upload-method h3 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.txtin {
+    width: 95%; /* Slightly less than 100% to allow padding */
+    height: 100px; /* Fixed height for consistency */
+    padding: 1em;
+    border-radius: 10px;
+    border: 1px solid #ccc;
 }
 
 .speechify-buttons {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    justify-content: space-around; /* Space buttons evenly */
     margin-top: 20px;
 }
 
-#speechifyButton {
+button {
     padding: 10px 20px;
-    background-color: #4CAF50; /* Green color */
-    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family: "Poppins", sans-serif; /* Inherit font from body */
+    font-family: "Poppins", sans-serif;
+    transition: background-color 0.3s ease;
+    margin: 0.5em; /* Add margin for spacing between buttons */
 }
 
+#speechifyButton {
+    background-color: orange;
+    color: white;
+}
 
 #speechifyButton:hover {
-    background-color: #3e8e41; /* Darker green on hover */
+    background-color: darkorange;
 }
 
-
 #downloadButton {
-    padding: 10px 20px;
-    background-color: #007bff; /* Blue color */
+    background-color: #007bff;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 10px; /* Add a small margin to separate it from the Convert button */
-    font-family: "Poppins", sans-serif; /* Inherit font from body */
 }
 
 #downloadButton:hover {
-    background-color: #0062cc; /* Darker blue on hover */
+    background-color: #0062cc;
 }
 
-#stopButton{
-    padding: 10px;
+#stopButton {
     background-color: orange;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 10px;
-    font-family: "poppins",sans-serif;
 }
 
 #stopButton:hover {
     background-color: darkorange;
+}
+
+footer {
+    text-align: center;
+    background-color: #000;
+    color: white;
+    padding: 1.5em 0;
+    margin-top: 20px;
 }

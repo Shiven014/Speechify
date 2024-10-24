@@ -1,79 +1,45 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700;900&display=swap');
 
 /* General Styles */
 body {
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-style: normal;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #333;
-    background-color: lightblue;
+    background-color: lightcyan;
 }
 
-/* Navbar */
-.navbar {
-    background-color: #222;
-    color: #fff;
-    padding: 2em 5%;
-    display: flex;
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-style:normal;
-    justify-content: space-between;
-    align-items: center;
+header {
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.navbar img{
-    width: 300px;
-    height: 50px;
+.navbar {
+    background-color: #222;
+    color: #fff;
+    padding: 1em 5%; /* Added padding for better alignment */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.navbar .sp{
-    font-size: 1.8em;
-    border: 5px;
-    color: #ff6200;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-}
-
-.navbar .sp:hover{
-    text-decoration: underline;
-}
-
-.logo {
-    font-size: 1.8em;
-    font-weight: bold;
-    letter-spacing: 1.5px;
+.navbar img {
+    width: 200px;
+    height: auto; /* Changed to auto for better responsiveness */
 }
 
 .nav-links {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    gap: 2em;
-    
-}
-
-.nav-links li {
-    display: inline;
+    gap: 1.5em;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2em;
-    padding: 0.5em 1em;
+    padding: 0.5em;
     border-radius: 3px;
     transition: background-color 0.3s ease;
 }
@@ -82,44 +48,19 @@ body {
     background-color: #575757;
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        gap: 1em;
-    }
-}
-/* General Styles */
-    body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
-    margin: 0;
-    padding: 0;
-    color: #333;
+.hamburger {
+    display: none;
+    cursor: pointer;
 }
 
-
-header nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-main {
-    padding: 50px 20px;
-} 
-
+/* Container */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -129,17 +70,11 @@ main {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.about-section .container{
-    border-radius: 3em;
-    display: flexbox;
-    background-color: lightgrey;
-}
-
+/* Section Styling */
 h1, h2 {
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
     color: #333;
-    padding-top: 1%;
 }
 
 p {
@@ -151,19 +86,17 @@ p {
 .intro-text {
     font-size: 20px;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 .divider {
-    height: 2px;
+    height: 3px;
     background-color: #ddd;
     margin: 30px 0;
 }
 
 .features-list, .tech-stack {
     list-style-type: none;
-    padding-left: 0;
-    font-size: 18px;
+    padding: 0;
 }
 
 .features-list li, .tech-stack li {
@@ -174,21 +107,19 @@ p {
 .features-list li::before, .tech-stack li::before {
     content: '✔';
     color: #ff6200;
-    font-size: 18px;
     margin-right: 10px;
 }
 
 .team-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 30px;
 }
 
 .team-member {
     text-align: center;
     margin: 15px;
-    flex-basis: 200px;
+    flex-basis: 23%; /* Adjusted for responsiveness */
 }
 
 .team-photo {
@@ -198,32 +129,53 @@ p {
     object-fit: cover;
 }
 
-.team-member h3 {
-    margin-top: 10px;
-    color: #333;
-}
-
-.team-member p {
-    color: #666;
-    font-size: 16px;
-}
-
 footer {
     text-align: center;
-    background-color: #000000;
+    background-color: #000;
     color: white;
-    padding: 1.5em 5%;
-    position: relative;
-    margin-top: 20px;
-    bottom: 0;
-    width: 90%;
+    padding: 1.5em 5%; /* Consistent padding */
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .team-section {
+    .nav-links {
+        display: none;
         flex-direction: column;
-        align-items: center;
+        background-color: #222;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1em;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .team-member {
+        flex-basis: 45%; /* Adjust for smaller screens */
+    }
+
+    h1, h2 {
+        font-size: 1.5rem; /* Adjust heading sizes */
+    }
+
+    p, .intro-text {
+        font-size: 16px; /* Adjust paragraph sizes */
     }
 }
 
+@media (max-width: 480px) {
+    .team-member {
+        flex-basis: 100%; /* Full width on smallest screens */
+    }
+
+    h1, h2 {
+        font-size: 1.2rem; /* Further reduce heading size */
+    }
+}

@@ -1,28 +1,23 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-/* Login Section */
-
-body{
+/* General Styles */
+body {
     background-color: lightcyan;
+    font-family: "Poppins", sans-serif;
 }
-
 
 /* Navbar */
 .navbar {
     background-color: #222;
     color: #fff;
-    padding: 2em 5%;
+    padding: 1em 5%;
     display: flex;
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-style:normal;
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -30,21 +25,9 @@ body{
     z-index: 1000;
 }
 
-.navbar img{
+.navbar img {
     width: 300px;
     height: 50px;
-}
-
-.navbar .sp{
-    font-size: 1.8em;
-    border: 5px;
-    color: #ff6200;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-}
-
-.logo button:hover{
-        text-decoration: underline;
 }
 
 .nav-links {
@@ -53,17 +36,11 @@ body{
     padding: 0;
     display: flex;
     gap: 2em;
-    
-}
-
-.nav-links li {
-    display: inline;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2em;
     padding: 0.5em 1em;
     border-radius: 3px;
     transition: background-color 0.3s ease;
@@ -74,14 +51,36 @@ body{
     text-decoration: underline;
 }
 
+.hamburger {
+    display: none; /* Hidden by default */
+}
+
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
         gap: 1em;
+        display: none; /* Initially hide for mobile */
+    }
+    
+    .nav-links.show {
+        display: flex; /* Show when toggled */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        width: 30px;
+        height: 3px;
+        background: #fff;
+        margin: 3px 0;
     }
 }
 
-
+/* Login Section */
 .login-section {
     display: flex;
     justify-content: center;
@@ -90,55 +89,34 @@ body{
     background-color: #bdb5b78b;
 }
 
-.login-section h2{
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-style: normal;
-}
-
 .login-container {
     background-color: #fff;
-    padding: 4em;
+    padding: 2em; /* Adjusted padding for mobile */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
+    width: 90%; /* Make it responsive */
+    max-width: 500px; /* Max width to keep it nice */
     text-align: center;
-    height: 600px;
 }
-
-.login-container .a{
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-style: normal;
-}
-
-.login-container a{
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-style: normal;
-}
-
 
 .login-container h2 {
     margin-bottom: 1.5em;
-    font-size: 2.1em;
+    font-size: 1.8em;
     color: #333;
 }
 
 .login-container label {
     display: block;
     text-align: left;
-    margin-bottom: 0.7em;
+    margin-bottom: 0.5em;
     color: #333;
     font-weight: bold;
-    font-size: 1.4em;
 }
 
 .login-container input {
     width: 100%;
     padding: 0.75em;
-    margin-bottom: 2.5em;
-    
+    margin-bottom: 1.5em;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
@@ -148,9 +126,7 @@ body{
     padding: 0.75em;
     background-color: #ff6200;
     color: #fff;
-    font-size: 1.2em;
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
+    font-size: 1em;
     font-weight: bold;
     border: none;
     border-radius: 5px;
@@ -158,13 +134,8 @@ body{
     transition: background-color 0.3s ease;
 }
 
-.login-container p{
-    font-size: 1.5em;
-}
-
 .login-container .btn:hover {
     background-color: #d15e16;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px  inset ;
 }
 
 .login-container p {
@@ -172,6 +143,7 @@ body{
     color: #555;
 }
 
+/* Footer */
 footer {
     text-align: center;
     background-color: #000000;
@@ -182,15 +154,3 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-    .team-section {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* .footer p {
-    margin-top: 0px;
-} */

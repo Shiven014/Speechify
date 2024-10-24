@@ -3,94 +3,92 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - Text-to-Speech   Engine</title>
+    <title>Home - Text-to-Speech Engine</title>
     <link rel="stylesheet" href="Home.css" />
-    <link rel="icon" href="favicon_speechify.png" id="favion" />
-    </head>
+    <link rel="icon" href="images/favicon_16x16.png" id="favion">
+</head>
 <body>
     <nav class="navbar">
-    <a href="Home.html">
-        <img src="speech.jpeg" alt="Speechify Logo" id="logo" />
-</a>
-
-    <ul class="nav-links">
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="Text-to-speech.html">Text-to-Speech</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="register.html">Register</a></li>
-    </ul>
+        <a href="Home.html">
+            <img src="images/speech.jpeg" alt="Speechify Logo" id="logo" />
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Text-to-speech.html">Text-to-Speech</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+        </ul>
     </nav>
 
     <section class="hero">
         <h1>Transform Your Text to Speech Effortlessly</h1>
-        <p>Create natural-sounding speech with just a few clicks.</p>
+        <p id="intro_l2">Create natural-sounding speech with Speechify.</p>
         <a href="login.html" class="btn">Get Started</a>
     </section>
-
+    <div id="featurehead">
+        <h2>Features</h2>
+    </div>
     <section class="features">
+        
+        
         <div class="feature">
-        <div class="feature-icon">🎙️</div>
-        <h2>Easy to Use</h2>
-        <p>
-            Our intuitive interface allows you to convert text to speech quickly and easily.
-        </p>
-    </div>
+            <div class="feature-icon">📝</div>
+            <h3>Write Content</h3>
+            <p>Type or paste your text directly into the input box for immediate conversion.</p>
+        </div>
         <div class="feature">
-        <div class="feature-icon">🔊</div>
-        <h2>Multiple Voices</h2>
-        <p>Choose from a variety of voices to find the perfect match for your needs.</p>
-    </div>
+            <div class="feature-icon">📄</div>
+            <h3>Upload Text Files</h3>
+            <p>Upload your documents for easy text-to-speech conversion.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🖼️</div>
+            <h3>Upload Images</h3>
+            <p>Upload images containing text for conversion to speech.</p>
+        </div>
     </section>
 
     <section class="how-it-works">
         <h2>How It Works</h2>
         <div class="steps">
-        <div class="step">
-            <h3>Step 1: Input Text</h3>
-            <p>
-            Simply type or paste your text into the input box on the
-            Text-to-Speech page.
-        </p>
+            <div class="step">
+                <h3>Input Your Text or Upload Files</h3>
+                <p>You can either write your text in the input box or upload text files/images for conversion.</p>
+            </div>
+            <div class="step">
+                <h3>Generate Speech</h3>
+                <p>Click the button to hear your text converted into speech.</p>
+            </div>
         </div>
-        <div class="step">
-            <h3>Step 2: Select Voice</h3>
-            <p>
-            Choose your preferred voice from the available options to match your
-            desired tone.
-        </p>
-        </div>
-        <div class="step">
-            <h3>Step 3: Generate Speech</h3>
-            <p>
-            Click the "Generate Speech" button to hear your text transformed
-            into natural-sounding audio.
-            </p>
-        </div>
-    </div>
     </section>
 
     <section class="testimonials">
         <h2>What Our Users Say</h2>
         <div class="testimonial">
-        <p>
-            "The TTS Engine has been a game-changer for my presentations. The
-            voices are so realistic, and the interface is incredibly
-            user-friendly!"
-        </p>
-        <cite>- Jane Doe, Educator</cite>
+            <p>"The TTS Engine has been a game-changer for my presentations. The voices are so realistic!"</p>
+            <cite>- Jane Doe, Educator</cite>
         </div>
         <div class="testimonial">
-        <p>
-            "I use this tool daily for creating voiceovers for my videos. The
-            customizable settings make it easy to get the perfect sound."
-        </p>
-        <cite>- John Smith, Content Creator</cite>
+            <p>"I use this tool daily for creating voiceovers. It's incredibly user-friendly!"</p>
+            <cite>- John Smith, Content Creator</cite>
         </div>
     </section>
 
     <footer class="footer">
         <p>&copy; 2024 Text-to-Speech Engine. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>

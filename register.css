@@ -1,33 +1,16 @@
 /* Reset and General Styles */
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: lightcyan;
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Poppins:wght@100..900&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: lightcyan;
     font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    height: 100vh;
-    margin: 0;
 }
-
-
 
 /* Navbar */
 .navbar {
@@ -35,88 +18,59 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #222;
-    padding: 2em 5%;
-    position: absolute;
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-style: bold;
+    padding: 1em 5%;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
+    z-index: 1000;
 }
 
-.navbar img{
+.navbar img {
     width: 300px;
-    height: 50px;
-}
-
-.navbar .sp{
-    font-size: 1.8em;
-    border: 5px;
-    color: #ff6200;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
+    height: auto; /* Maintain aspect ratio */
 }
 
 .nav-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    list-style: none;
     display: flex;
-    gap: 2em;
 }
 
 .nav-links li {
-    display: inline;
+    margin-left: 20px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.2em;
-    padding: 0.5em 1em;
-    transition: background-color 0.8s ease;
-    border-radius: 3px;
+    font-size: 18px;
+    padding: 10px 36px;
+    transition: background-color 0.3s ease;
 }
 
 .nav-links a:hover {
-    background-color: #555;
+    background-color: #575757;
     text-decoration: underline;
-
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .navbar {
-        justify-content: space-between;
-    }
-    
-    .logo {
-        font-size: 20px;
-    }
+.hamburger {
+    display: none; /* Hidden by default */
 }
 
-/* Container */
+/* Sign Up Section */
+.sign-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* Adjust for navbar height */
+}
+
 .container {
-    padding: 50px;
-    border-radius: 30px;
-    border: 5px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 5px 10px rgba(24, 5, 5, 0.1);
-    width: 130%;
-    max-width: 500px;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Max width */
     text-align: center;
-    height: 80%;
-    margin-top: 80px; /* Adjusted to create space below the navbar */
 }
 
 .container h2 {
@@ -130,50 +84,16 @@ body {
     color: #999;
     margin-bottom: 20px;
     line-height: 1.5em;
-    text-align: center;
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
 }
 
 /* Form */
 .form-group {
     margin-bottom: 15px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 150;
-    font-style: normal;
-}
-
-
-
-.form-group #username{
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-style: normal;
-}
-
-.form-group #email{
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-style: normal;
-}
-
-.form-group #password{
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-style: normal;
-}
-
-.form-group #confirmPassword{
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-style: normal;
 }
 
 .form-group input {
     width: 100%;
     padding: 10px;
-    box-sizing: border-box;
     border: 1px solid #dbdbdb;
     border-radius: 4px;
     background-color: #fafafa;
@@ -182,11 +102,9 @@ body {
 }
 
 .form-group input:focus {
-    border-color: #a8a8a8;
+    border-color: #ff6200;
     outline: none;
 }
-
-
 
 .btn {
     width: 100%;
@@ -199,33 +117,72 @@ body {
     font-size: 1.2em;
     font-weight: bold;
     margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-        background-color: #ff6200;
+    background-color: #d15e16;
 }
 
-
-
-
-.ftr a{
-    color: #de7c31;
-    text-decoration: solid;
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-style: calc();
-    font-optical-sizing: auto;
-} 
-
-.ftr p{
-    color: #b1cae3;
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 1em 0;
     margin-top: 20px;
 }
-    
 
-.ftr a:hover {
-    text-decoration: underline;
+.footer p {
+    margin: 0;
+    color: #b1cae3;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to start */
+    }
 
+    .nav-links {
+        flex-direction: column; /* Stack nav links vertically */
+        margin-top: 10px;
+    }
 
+    .nav-links li {
+        margin-left: 0; /* Remove margin for stacked links */
+        margin-bottom: 10px; /* Add some space between links */
+    }
+
+    .sign-up {
+        height: auto; /* Allow content to dictate height */
+        padding: 20px; /* Add some padding */
+    }
+
+    .container {
+        padding: 1em; /* Reduce padding on smaller screens */
+    }
+
+    .container h2 {
+        font-size: 24px; /* Smaller font size for headings */
+    }
+
+    .container p {
+        font-size: 1em; /* Smaller font size for paragraphs */
+    }
+
+    .btn {
+        font-size: 1em; /* Smaller font size for buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar img {
+        width: 200px; /* Smaller logo for small screens */
+    }
+
+    .container {
+        width: 95%; /* Adjust container width */
+    }
+}

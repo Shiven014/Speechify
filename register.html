@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Sign Up - Text-to-Speech Engine</title>
     <link rel="stylesheet" href="register.css">
-
-    <!--  favicon -->
-    <link rel="icon" href="favicon_speechify.png" id="favion" /></head>
+    <link rel="icon" href="images/favicon_16x16.png" id="favion">
+</head>
 <body>
-
-    
     <nav class="navbar">
-
         <a href="Home.html">
-            <img src="speech.jpeg" alt="Speechify Logo" id="logo">
+            <img src="images/speech.jpeg" alt="Speechify Logo" id="logo">
         </a>
-        
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <ul class="nav-links">
             <li><a href="Home.html">Home</a></li>
             <li><a href="Text-to-speech.html">Text-to-Speech</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="login.html">Login</a></li>
-            <li><a href="register.html">Register</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
         </ul>
     </nav>
 
     <section class="sign-up">
         <div class="container">
-            <h2>Text To Speech Converter</h2>
-            <p>Sign Up to Transform Text into Voice Magic</p>
+            <h2>Create Your Account</h2>
             <form id="signupForm">
                 <div class="form-group">
                     <input type="text" id="username" name="username" placeholder="Username" required>
@@ -43,14 +42,24 @@
                 <div class="form-group">
                     <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
                 </div>
-                
-                <a href="./Text-to-speech.html"><button type="submit" class="btn">Sign Up</button></a>
+                <button type="submit" class="btn">Sign Up</button>
             </form>
-    
-                <div class="ftr">
-                    <p>By signing up, you agree to our </p><a href="#">Terms</a> <strong style="color: #b1cae3;">and</strong> <a href="#">Privacy Policy</a>.
-                </div>
+            <p>Already have an account? <a href="login.html">Login</a></p>
         </div>
     </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Text-to-Speech Engine. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+
+    <script src="sign-up.js"></script>
+    
 </body>
 </html>

@@ -1,33 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900&display=swap');
 
 /* General Styles */
 body {
     font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-style: normal;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #333;
     background-color: #f9f9f9;
-    position: sticky;
-    right: 0;
-    z-index: 1000;
+    color: #333;
+    line-height: 1.6; /* Improved readability */
 }
 
-/* Navbar */
 .navbar {
     background-color: #222;
-    color: #fff;
-    padding: 2em 5%;
+    padding: 1.5em 5%;
     display: flex;
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-style:normal;
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -36,40 +23,21 @@ body {
     
 }
 
-.navbar img{
-    width: 300px;
-    height: 50px;
-}
-
-.navbar .sp{
-    font-size: 1.8em;
-    border: 5px;
-    color: #ff6200;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-}
-
-.logo button:hover{
-        text-decoration: underline;
+.navbar img {
+    width: 200px;
+    height: auto;
+    border-radius: 0.2em;
 }
 
 .nav-links {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    gap: 2em;
-    
-}
-
-.nav-links li {
-    display: inline;
+    gap: 1.5em;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2em;
     padding: 0.5em 1em;
     border-radius: 3px;
     transition: background-color 0.3s ease;
@@ -78,16 +46,21 @@ body {
 .nav-links a:hover {
     background-color: #575757;
     text-decoration: underline;
+    
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        gap: 1em;
-    }
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
-
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
 
 /* Hero Section */
 .hero {
@@ -111,18 +84,19 @@ body {
     z-index: 0;
 }
 
+.hero h1, .hero p, .hero .btn {
+    position: relative;
+    z-index: 1;
+}
+
 .hero h1 {
     font-size: 3em;
     margin-bottom: 0.5em;
-    z-index: 1;
-    position: relative;
 }
 
 .hero p {
     font-size: 1.5em;
-    margin-bottom: 2.5em;
-    z-index: 1;
-    position: relative;
+    margin-bottom: 1em;
 }
 
 .hero .btn {
@@ -130,16 +104,14 @@ body {
     background-color: #ff6200;
     color: #fff;
     text-decoration: none;
-    font-size: 1.3em;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    z-index: 1;
-    position: relative;
-    margin-top: 3em;
+    font-size: 1.2em;
+    border-radius: .5em;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for button */
 }
 
 .hero .btn:hover {
     background-color: #e55500;
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 /* Features Section */
@@ -149,11 +121,25 @@ body {
     padding: 3em 5%;
     background-color: #fff;
     text-align: center;
+    overflow-x: auto; /* Allow wrapping of features */
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    border-radius: 2em;
 }
 
 .feature {
-    flex-basis: 30%;
-    padding: 1em;
+    flex: 1;
+    padding: 2em;
+    max-width: 300px;
+    transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+
+.feature:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    border-radius: 1.2em;
+    
 }
 
 .feature h2 {
@@ -163,22 +149,20 @@ body {
 }
 
 .feature p {
+    display: block;
     font-size: 1em;
     color: #555;
-    line-height: 1.6em;
 }
+
+#featurehead{
+    display: flex;
+    justify-content: center;
+    font-size: 1.2em;}
 
 .feature-icon {
     font-size: 3em;
     color: #ff6200;
     margin-bottom: 0.5em;
-}
-
-@media (max-width: 768px) {
-    .features {
-        flex-direction: column;
-        gap: 2em;
-    }
 }
 
 /* How It Works Section */
@@ -191,17 +175,17 @@ body {
 .how-it-works h2 {
     font-size: 2em;
     margin-bottom: 1em;
-    color: #333;
 }
 
 .steps {
     display: flex;
     justify-content: space-around;
-    margin-top: 2em;
+    gap: 1.5em;
+    flex-wrap: wrap; /* Allow wrapping of steps */
 }
 
 .step {
-    flex-basis: 22%;
+    flex-basis: 30%;
     padding: 1em;
 }
 
@@ -214,14 +198,6 @@ body {
 .step p {
     font-size: 1em;
     color: #555;
-    line-height: 1.6em;
-}
-
-@media (max-width: 768px) {
-    .steps {
-        flex-direction: column;
-        gap: 2em;
-    }
 }
 
 /* Testimonials Section */
@@ -234,7 +210,6 @@ body {
 .testimonials h2 {
     font-size: 2em;
     margin-bottom: 1em;
-    color: #333;
 }
 
 .testimonial {
@@ -245,9 +220,11 @@ body {
     font-size: 1.2em;
     font-style: italic;
     color: #555;
-    line-height: 1.6em;
 }
 
+#intro_l2{
+    margin-bottom: 2em;
+}
 .testimonial cite {
     display: block;
     margin-top: 1em;
@@ -255,17 +232,60 @@ body {
     color: #999;
 }
 
+/* Footer */
 .footer {
     background-color: #222;
-    color: #fff; 
-    text-align: center; 
-    padding: 1em 5%; 
-    position: relative; 
-    bottom: 0; 
-    margin-top: 20px; 
-    width: 90%; 
+    color: #fff;
+    text-align: center;
+    padding: 1.5em 5%;
 }
 
 .footer p {
-        margin-top: 20px; 
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1em;
+        background-color: #222;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1em 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .features, .steps {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .feature, .step {
+        flex-basis: 100%; /* Full width on small screens */
+    }
+
+    .hero h1 {
+        font-size: 2.2em; /* Smaller heading for mobile */
+    }
+
+    .hero p {
+        font-size: 1.2em; /* Smaller paragraph for mobile */
+    }
+
+    .hero .btn {
+        font-size: 1em;
+        padding: 0.5em 1em; /* Smaller button */
+    }
 }
